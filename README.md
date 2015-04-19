@@ -1,0 +1,1 @@
+# MOSAIQO API Postman configuration

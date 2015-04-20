@@ -155,7 +155,7 @@
 		{
 			"id": "9a900dc6-399a-dff6-8f8c-33c544242db6",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/verify",
+			"url": "{{API_URL}}/auth/{{TOKEN}}",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -165,7 +165,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1429486627145,
+			"time": 1429522781249,
 			"name": "Verify",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -182,13 +182,13 @@
 			"data": [
 				{
 					"key": "username",
-					"value": "demo",
+					"value": "admin",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "password",
-					"value": "demo",
+					"value": "password",
 					"type": "text",
 					"enabled": true
 				}
@@ -198,7 +198,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1429486614017,
+			"time": 1429522979048,
 			"name": "Login",
 			"description": "Login with demo user",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",

@@ -22,6 +22,25 @@
 			"write": true
 		},
 		{
+			"id": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
+			"name": "Blog/Articles",
+			"description": "",
+			"order": [
+				"dd8d0368-23a4-2968-447e-ed88534773db",
+				"c103e129-2ab7-a294-5f58-348a69875076",
+				"f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
+				"8b40877d-8c05-ad6c-32ed-df8c642ac38c",
+				"69b66600-f115-7115-9759-7d5aa24f7a6e",
+				"dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c"
+			],
+			"collection_name": "MosaiqoAPI",
+			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"collection_owner": "",
+			"write": true,
+			"collection": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
+		},
+		{
 			"id": "3d68e83d-891a-4510-3298-6050504b1cb9",
 			"name": "Media",
 			"description": "",
@@ -153,6 +172,95 @@
 			"synced": false
 		},
 		{
+			"id": "69b66600-f115-7115-9759-7d5aa24f7a6e",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "title",
+					"value": "Article title",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "excerpt",
+					"value": "Article excerpt",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "body",
+					"value": "Article body",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "active",
+					"value": "true",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "commentable",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "published",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997808601,
+			"name": "Create article object",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "8b40877d-8c05-ad6c-32ed-df8c642ac38c",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/a-non-existing-record-id",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997481563,
+			"name": "Delete inexistant record",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
 			"id": "9a900dc6-399a-dff6-8f8c-33c544242db6",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/auth/{{TOKEN}}",
@@ -226,6 +334,26 @@
 			"synced": false
 		},
 		{
+			"id": "c103e129-2ab7-a294-5f58-348a69875076",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997635778,
+			"name": "Get one",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
 			"id": "c2047adf-fb32-bd49-9079-5e11390d2b77",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/media",
@@ -291,6 +419,51 @@
 			"synced": false
 		},
 		{
+			"id": "dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/media/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "name",
+					"value": "ItemName2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "ItemDescription2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "http://lorempixel.com/640/480/cats",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "active",
+					"value": "true",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997649471,
+			"name": "Update article object",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
 			"id": "dd65d886-ea7c-e4d9-ebc0-0b752b22d7c3",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/auth/{{TOKEN}}",
@@ -311,6 +484,26 @@
 			"synced": false
 		},
 		{
+			"id": "dd8d0368-23a4-2968-447e-ed88534773db",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997458324,
+			"name": "Get all",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
 			"id": "e2bd1f2e-3825-467a-b3de-10c7d0fe45c1",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/media/a-non-existing-record-id",
@@ -325,6 +518,26 @@
 			"helperAttributes": {},
 			"time": 1429486596047,
 			"name": "Delete inexistant record",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997639827,
+			"name": "Delete one",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],

@@ -186,6 +186,12 @@
 					"enabled": true
 				},
 				{
+					"key": "slug",
+					"value": "article-slug",
+					"type": "text",
+					"enabled": true
+				},
+				{
 					"key": "excerpt",
 					"value": "Article excerpt",
 					"type": "text",
@@ -226,6 +232,12 @@
 					"value": "1",
 					"type": "text",
 					"enabled": true
+				},
+				{
+					"key": "published_at",
+					"value": "",
+					"type": "text",
+					"enabled": true
 				}
 			],
 			"dataMode": "urlencoded",
@@ -233,7 +245,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997808601,
+			"time": 1431364815506,
 			"name": "Create article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -421,32 +433,62 @@
 		{
 			"id": "dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/media/{{ARTICLE_ITEM_ID}}",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
 			"data": [
 				{
-					"key": "name",
-					"value": "ItemName2",
+					"key": "title",
+					"value": "Test",
 					"type": "text",
 					"enabled": true
 				},
 				{
-					"key": "description",
-					"value": "ItemDescription2",
+					"key": "slug",
+					"value": "this-is-a-test",
 					"type": "text",
 					"enabled": true
 				},
 				{
-					"key": "url",
-					"value": "http://lorempixel.com/640/480/cats",
+					"key": "excerpt",
+					"value": "Holaquetal",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "body",
+					"value": "POCTLLA",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "active",
 					"value": "true",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "commentable",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author_id",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "published",
+					"value": "1",
 					"type": "text",
 					"enabled": true
 				}
@@ -456,7 +498,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997649471,
+			"time": 1431364914070,
 			"name": "Update article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",

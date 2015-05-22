@@ -216,12 +216,6 @@
 					"enabled": true
 				},
 				{
-					"key": "user_id",
-					"value": "1",
-					"type": "text",
-					"enabled": true
-				},
-				{
 					"key": "author_id",
 					"value": "1",
 					"type": "text",
@@ -234,8 +228,8 @@
 					"enabled": true
 				},
 				{
-					"key": "published_at",
-					"value": "",
+					"key": "publish_date",
+					"value": "2015-04-10 00:13:44",
 					"type": "text",
 					"enabled": true
 				}
@@ -245,7 +239,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1431364815506,
+			"time": 1432335491732,
 			"name": "Create article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -475,12 +469,6 @@
 					"enabled": true
 				},
 				{
-					"key": "user_id",
-					"value": "1",
-					"type": "text",
-					"enabled": true
-				},
-				{
 					"key": "author_id",
 					"value": "1",
 					"type": "text",
@@ -491,6 +479,12 @@
 					"value": "1",
 					"type": "text",
 					"enabled": true
+				},
+				{
+					"key": "publish_date",
+					"value": "2015-04-10 00:13:44",
+					"type": "text",
+					"enabled": true
 				}
 			],
 			"dataMode": "urlencoded",
@@ -498,7 +492,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1431364914070,
+			"time": 1432335617618,
 			"name": "Update article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",

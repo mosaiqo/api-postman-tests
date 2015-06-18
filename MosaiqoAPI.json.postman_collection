@@ -27,12 +27,12 @@
 			"description": "",
 			"order": [
 				"dd8d0368-23a4-2968-447e-ed88534773db",
+				"0ed49aeb-d70e-66a2-a0c6-5550b49b1412",
 				"c103e129-2ab7-a294-5f58-348a69875076",
-				"f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
-				"8b40877d-8c05-ad6c-32ed-df8c642ac38c",
 				"69b66600-f115-7115-9759-7d5aa24f7a6e",
 				"dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c",
-				"0ed49aeb-d70e-66a2-a0c6-5550b49b1412"
+				"f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
+				"8b40877d-8c05-ad6c-32ed-df8c642ac38c"
 			],
 			"collection_name": "MosaiqoAPI",
 			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -48,15 +48,16 @@
 			"order": [
 				"ceace01a-a007-eaa9-36a4-9307260a3cbf",
 				"51a6b12d-85cc-7666-e8a3-a89c5b087bd3",
-				"236492ea-2648-4b5b-4da2-bc57ccbddb06",
-				"e2bd1f2e-3825-467a-b3de-10c7d0fe45c1",
 				"c2047adf-fb32-bd49-9079-5e11390d2b77",
-				"0f28aaeb-b725-feeb-fd5c-4ba9fe52c80c"
+				"0f28aaeb-b725-feeb-fd5c-4ba9fe52c80c",
+				"236492ea-2648-4b5b-4da2-bc57ccbddb06",
+				"e2bd1f2e-3825-467a-b3de-10c7d0fe45c1"
 			],
 			"collection_name": "MosaiqoAPI",
 			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"collection_owner": "",
-			"write": true
+			"write": true,
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		}
 	],
 	"timestamp": 1424861260627,

@@ -31,7 +31,8 @@
 				"f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
 				"8b40877d-8c05-ad6c-32ed-df8c642ac38c",
 				"69b66600-f115-7115-9759-7d5aa24f7a6e",
-				"dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c"
+				"dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c",
+				"0ed49aeb-d70e-66a2-a0c6-5550b49b1412"
 			],
 			"collection_name": "MosaiqoAPI",
 			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -66,6 +67,28 @@
 	"public": false,
 	"write": true,
 	"requests": [
+		{
+			"id": "0ed49aeb-d70e-66a2-a0c6-5550b49b1412",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles?expand=author&per_page=2&sort_by[]=slug&sort_by[]=title&order=DESC",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"data": [],
+			"dataMode": "params",
+			"name": "Get all (with options)",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1434547736331,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
+			"synced": false
+		},
 		{
 			"id": "0f28aaeb-b725-feeb-fd5c-4ba9fe52c80c",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
@@ -204,12 +227,6 @@
 					"enabled": true
 				},
 				{
-					"key": "active",
-					"value": "true",
-					"type": "text",
-					"enabled": true
-				},
-				{
 					"key": "commentable",
 					"value": "1",
 					"type": "text",
@@ -217,7 +234,7 @@
 				},
 				{
 					"key": "author_id",
-					"value": "1",
+					"value": "{{AUTHOR_ID}}",
 					"type": "text",
 					"enabled": true
 				},
@@ -229,7 +246,7 @@
 				},
 				{
 					"key": "publish_date",
-					"value": "2015-04-10 00:13:44",
+					"value": "1434540172",
 					"type": "text",
 					"enabled": true
 				}
@@ -239,7 +256,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1432335491732,
+			"time": 1434621603966,
 			"name": "Create article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -296,13 +313,13 @@
 			"data": [
 				{
 					"key": "username",
-					"value": "admin",
+					"value": "demo",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "password",
-					"value": "password",
+					"value": "demo",
 					"type": "text",
 					"enabled": true
 				}
@@ -312,7 +329,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1429522979048,
+			"time": 1434620933258,
 			"name": "Login",
 			"description": "Login with demo user",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -452,13 +469,7 @@
 				},
 				{
 					"key": "body",
-					"value": "POCTLLA",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "active",
-					"value": "true",
+					"value": "HOCTL·LA",
 					"type": "text",
 					"enabled": true
 				},
@@ -470,7 +481,7 @@
 				},
 				{
 					"key": "author_id",
-					"value": "1",
+					"value": "{{AUTHOR_ID}}",
 					"type": "text",
 					"enabled": true
 				},
@@ -482,7 +493,7 @@
 				},
 				{
 					"key": "publish_date",
-					"value": "2015-04-10 00:13:44",
+					"value": "1434540172",
 					"type": "text",
 					"enabled": true
 				}
@@ -492,7 +503,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1432335617618,
+			"time": 1434636328392,
 			"name": "Update article object",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",

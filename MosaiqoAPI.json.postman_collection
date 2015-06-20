@@ -22,8 +22,29 @@
 			"write": true
 		},
 		{
-			"id": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
+			"id": "3d335ebb-e730-90af-44cc-7f761ba1083f",
 			"name": "Blog/Articles",
+			"description": "",
+			"order": [
+				"ccacfc2c-9b36-ba94-ce4b-598e87c54d49",
+				"50b81453-83df-a969-a565-de01d7ee1957",
+				"e8ca49c4-8a43-cf15-df0f-2b6ae0eaac7d",
+				"899651e8-c78a-8fd4-fbfd-9c47d5d54a84",
+				"578cfaa8-bc45-089b-4866-0232b16764dc",
+				"af56f6b3-2326-c233-6d95-09739f90f279",
+				"71e3443f-ac67-5108-30de-c9af90a3ef86",
+				"b75ec049-c7d0-f046-990c-4d4268778263"
+			],
+			"collection_name": "MosaiqoAPI",
+			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"collection_owner": "",
+			"write": true,
+			"collection": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
+		},
+		{
+			"id": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
+			"name": "Blog/Tags",
 			"description": "",
 			"order": [
 				"dd8d0368-23a4-2968-447e-ed88534773db",
@@ -71,23 +92,21 @@
 		{
 			"id": "0ed49aeb-d70e-66a2-a0c6-5550b49b1412",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles?expand=author&per_page=2&sort_by[]=slug&sort_by[]=title&order=DESC",
-			"pathVariables": {},
+			"url": "{{API_URL}}/blog/tags?per_page=2&sort_by=name&order=DESC",
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"data": [],
 			"dataMode": "params",
-			"name": "Get all (with options)",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1434547736331,
 			"version": 2,
-			"responses": [],
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
+			"time": 1434823530463,
+			"name": "Get all (with options)",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
 			"synced": false
 		},
 		{
@@ -156,6 +175,29 @@
 			"synced": false
 		},
 		{
+			"id": "50b81453-83df-a969-a565-de01d7ee1957",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles?expand=author&per_page=2&sort_by[]=slug&sort_by[]=title&order=DESC",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"data": [],
+			"dataMode": "params",
+			"name": "Get all (with options)",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1434547736331,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
+			"synced": false,
+			"write": true
+		},
+		{
 			"id": "51884883-10b8-9303-01e3-09fc32cde4d5",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/auth/{{TOKEN}}",
@@ -196,7 +238,138 @@
 			"synced": false
 		},
 		{
+			"id": "578cfaa8-bc45-089b-4866-0232b16764dc",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "title",
+					"value": "ola k ase",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "slug",
+					"value": "this-is-a-test",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "excerpt",
+					"value": "Holaquetal",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "body",
+					"value": "HOCTL·LA",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "commentable",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author_id",
+					"value": "{{AUTHOR_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "published",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "publish_date",
+					"value": "1434540172",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1434811681739,
+			"name": "Update",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f"
+		},
+		{
 			"id": "69b66600-f115-7115-9759-7d5aa24f7a6e",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/tags",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "foo",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "slug",
+					"value": "foo",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "foo description",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1434823686922,
+			"name": "Create",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "71e3443f-ac67-5108-30de-c9af90a3ef86",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997639827,
+			"name": "Delete one",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"write": true,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
+			"synced": false
+		},
+		{
+			"id": "899651e8-c78a-8fd4-fbfd-9c47d5d54a84",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/blog/articles",
 			"preRequestScript": "",
@@ -258,16 +431,18 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1434621603966,
-			"name": "Create article object",
+			"name": "Create",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],
+			"write": true,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
 			"synced": false
 		},
 		{
 			"id": "8b40877d-8c05-ad6c-32ed-df8c642ac38c",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles/a-non-existing-record-id",
+			"url": "{{API_URL}}/blog/tags/a-non-existing-record-id",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -277,7 +452,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997481563,
+			"time": 1434825212899,
 			"name": "Delete inexistant record",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -338,6 +513,116 @@
 			"synced": false
 		},
 		{
+			"id": "af56f6b3-2326-c233-6d95-09739f90f279",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "title",
+					"value": "ola k ase",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "slug",
+					"value": "this-is-a-test",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "excerpt",
+					"value": "Holaquetal",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "body",
+					"value": "HOCTL·LA",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "commentable",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "author_id",
+					"value": "{{AUTHOR_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "published",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "publish_date",
+					"value": "1434540172",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tags_names",
+					"value": "nostrum",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tags_names",
+					"value": "exercitationem",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tags_names",
+					"value": "expedita",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1434752969031,
+			"name": "Update with Tags",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"synced": false,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f"
+		},
+		{
+			"id": "b75ec049-c7d0-f046-990c-4d4268778263",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles/a-non-existing-record-id",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997481563,
+			"name": "Delete inexistant record",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"write": true,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
+			"synced": false
+		},
+		{
 			"id": "bddb8c17-b01d-c100-1e73-bc83daaaa4e8",
 			"headers": "",
 			"url": "{{API_URL}}",
@@ -360,7 +645,7 @@
 		{
 			"id": "c103e129-2ab7-a294-5f58-348a69875076",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"url": "{{API_URL}}/blog/tags/{{TAG_ITEM_ID}}",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -370,7 +655,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997635778,
+			"time": 1434825240581,
 			"name": "Get one",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -423,6 +708,28 @@
 			"synced": false
 		},
 		{
+			"id": "ccacfc2c-9b36-ba94-ce4b-598e87c54d49",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/articles",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"ARTICLE_ITEM_ID\", data.data[0].id);\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1434663669121,
+			"name": "Get all",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"write": true,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
+			"synced": false
+		},
+		{
 			"id": "ceace01a-a007-eaa9-36a4-9307260a3cbf",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/media",
@@ -445,56 +752,26 @@
 		{
 			"id": "dbebe2a8-90b0-89fb-13a8-8826e9bcfc3c",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"url": "{{API_URL}}/blog/tags/{{TAG_ITEM_ID}}",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "PUT",
 			"data": [
 				{
-					"key": "title",
-					"value": "Test",
+					"key": "name",
+					"value": "bar",
 					"type": "text",
 					"enabled": true
 				},
 				{
 					"key": "slug",
-					"value": "this-is-a-test",
+					"value": "bar",
 					"type": "text",
 					"enabled": true
 				},
 				{
-					"key": "excerpt",
-					"value": "Holaquetal",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "body",
-					"value": "HOCTL·LA",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "commentable",
-					"value": "1",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "author_id",
-					"value": "{{AUTHOR_ID}}",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "published",
-					"value": "1",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "publish_date",
-					"value": "1434540172",
+					"key": "description",
+					"value": "bar description",
 					"type": "text",
 					"enabled": true
 				}
@@ -504,8 +781,8 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1434636328392,
-			"name": "Update article object",
+			"time": 1434823676814,
+			"name": "Update",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],
@@ -534,17 +811,17 @@
 		{
 			"id": "dd8d0368-23a4-2968-447e-ed88534773db",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles",
+			"url": "{{API_URL}}/blog/tags",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
 			"data": [],
 			"dataMode": "params",
 			"version": 2,
-			"tests": "",
+			"tests": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"ARTICLE_ITEM_ID\", data.data[0].id);\n",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997458324,
+			"time": 1434823482845,
 			"name": "Get all",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -572,9 +849,31 @@
 			"synced": false
 		},
 		{
-			"id": "f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
+			"id": "e8ca49c4-8a43-cf15-df0f-2b6ae0eaac7d",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
 			"url": "{{API_URL}}/blog/articles/{{ARTICLE_ITEM_ID}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1430997635778,
+			"name": "Get one",
+			"description": "",
+			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
+			"responses": [],
+			"write": true,
+			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
+			"synced": false
+		},
+		{
+			"id": "f3bc38ea-b39a-57d4-e681-6997e84cb5b4",
+			"headers": "Authorization: Bearer {{TOKEN}}\n",
+			"url": "{{API_URL}}/blog/tags/{{TAG_ITEM_ID}}",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "DELETE",
@@ -584,7 +883,7 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1430997639827,
+			"time": 1434825203467,
 			"name": "Delete one",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",

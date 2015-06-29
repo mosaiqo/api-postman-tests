@@ -82,12 +82,10 @@
 		}
 	],
 	"timestamp": 1424861260627,
-	"synced": false,
 	"owner": "",
-	"subscribed": false,
 	"remoteLink": "",
 	"public": false,
-	"write": true,
+	"synced": false,
 	"requests": [
 		{
 			"id": "0ed49aeb-d70e-66a2-a0c6-5550b49b1412",
@@ -318,12 +316,6 @@
 					"enabled": true
 				},
 				{
-					"key": "slug",
-					"value": "foo",
-					"type": "text",
-					"enabled": true
-				},
-				{
 					"key": "description",
 					"value": "foo description",
 					"type": "text",
@@ -335,7 +327,7 @@
 			"tests": "var data = JSON.parse(responseBody).data;\n\nif(data) {\n    postman.setEnvironmentVariable(\"TAG_ITEM_ID\", data.id);\n}",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1435420847962,
+			"time": 1435440708569,
 			"name": "Create",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
@@ -360,7 +352,6 @@
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],
-			"write": true,
 			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
 			"synced": false
 		},
@@ -599,7 +590,6 @@
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],
-			"write": true,
 			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
 			"synced": false
 		},
@@ -845,7 +835,6 @@
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
 			"responses": [],
-			"write": true,
 			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
 			"synced": false
 		},

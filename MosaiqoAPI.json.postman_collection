@@ -75,29 +75,6 @@
 			"collection_name": "MosaiqoAPI",
 			"collection_owner": "1605",
 			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
-			"id": "3d68e83d-891a-4510-3298-6050504b1cb9",
-			"name": "Media",
-			"description": "",
-			"owner": "1605",
-			"lastUpdatedBy": "69611",
-			"lastRevision": 13481199,
-			"collection": "1b99de18-05e7-f05c-7127-8ae2983d3e6b",
-			"order": [
-				"ceace01a-a007-eaa9-36a4-9307260a3cbf",
-				"51a6b12d-85cc-7666-e8a3-a89c5b087bd3",
-				"c2047adf-fb32-bd49-9079-5e11390d2b77",
-				"0f28aaeb-b725-feeb-fd5c-4ba9fe52c80c",
-				"236492ea-2648-4b5b-4da2-bc57ccbddb06",
-				"e2bd1f2e-3825-467a-b3de-10c7d0fe45c1"
-			],
-			"createdAt": "2015-06-29T14:36:10.000Z",
-			"updatedAt": "2015-06-29T14:36:11.000Z",
-			"write": true,
-			"collection_name": "MosaiqoAPI",
-			"collection_owner": "1605",
-			"collection_id": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		}
 	],
 	"timestamp": 0,
@@ -108,7 +85,7 @@
 		{
 			"id": "0ed49aeb-d70e-66a2-a0c6-5550b49b1412",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/tags?per_page=2&order=name",
+			"url": "{{API_URL}}/blog/tags?per_page=2&sort=name",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -118,80 +95,15 @@
 			"tests": "var data = JSON.parse(responseBody).data;\n\nif(data.length) {\n    postman.setEnvironmentVariable(\"TAG_ITEM_ID\", data[0].id);\n}",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1436554054375,
+			"time": 1436633154401,
 			"name": "Get all (with options)",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		},
 		{
-			"id": "0f28aaeb-b725-feeb-fd5c-4ba9fe52c80c",
-			"name": "Update media object",
-			"dataMode": "urlencoded",
-			"data": [
-				{
-					"key": "name",
-					"value": "ItemName2",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "description",
-					"value": "ItemDescription2",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "url",
-					"value": "http://lorempixel.com/640/480/cats",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "active",
-					"value": "true",
-					"type": "text",
-					"enabled": true
-				}
-			],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "PUT",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media/{{MEDIA_ITEM_ID}}",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
-			"id": "236492ea-2648-4b5b-4da2-bc57ccbddb06",
-			"name": "Delete one",
-			"dataMode": "params",
-			"data": [],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "DELETE",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media/{{MEDIA_ITEM_ID}}",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
 			"id": "50b81453-83df-a969-a565-de01d7ee1957",
 			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"url": "{{API_URL}}/blog/articles?include=author&per_page=2&order=title|desc,publish_date|asc,id",
+			"url": "{{API_URL}}/blog/articles?include=author&per_page=2&sort=title|desc,publish_date|asc,id",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -201,7 +113,7 @@
 			"tests": "var data = JSON.parse(responseBody).data;\n\nif(data.length) {\n    postman.setEnvironmentVariable(\"ARTICLE_ITEM_ID\", data[0].id);\n}",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1436555002196,
+			"time": 1436633127996,
 			"name": "Get all (with options)",
 			"description": "",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
@@ -224,26 +136,6 @@
 			"currentHelper": "normal",
 			"helperAttributes": "{}",
 			"folder": "3ddccdb4-ac5c-701f-d6bd-120ed1186d47",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
-			"id": "51a6b12d-85cc-7666-e8a3-a89c5b087bd3",
-			"name": "Get one",
-			"dataMode": "params",
-			"data": [],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "GET",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media/{{MEDIA_ITEM_ID}}",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		},
 		{
@@ -646,51 +538,6 @@
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		},
 		{
-			"id": "c2047adf-fb32-bd49-9079-5e11390d2b77",
-			"name": "Create media object",
-			"dataMode": "urlencoded",
-			"data": [
-				{
-					"key": "name",
-					"value": "ItemName",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "description",
-					"value": "ItemDescription",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "url",
-					"value": "http://lorempixel.com/640/480/cats",
-					"type": "text",
-					"enabled": true
-				},
-				{
-					"key": "active",
-					"value": "true",
-					"type": "text",
-					"enabled": true
-				}
-			],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "POST",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
 			"id": "ccacfc2c-9b36-ba94-ce4b-598e87c54d49",
 			"name": "Get all",
 			"dataMode": "params",
@@ -708,26 +555,6 @@
 			"currentHelper": "normal",
 			"helperAttributes": "{}",
 			"folder": "3d335ebb-e730-90af-44cc-7f761ba1083f",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
-			"id": "ceace01a-a007-eaa9-36a4-9307260a3cbf",
-			"name": "Get all",
-			"dataMode": "params",
-			"data": [],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "GET",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		},
 		{
@@ -807,26 +634,6 @@
 			"currentHelper": "normal",
 			"helperAttributes": "{}",
 			"folder": "c51436e6-b10c-6a42-e511-30898fe3f2e4",
-			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
-		},
-		{
-			"id": "e2bd1f2e-3825-467a-b3de-10c7d0fe45c1",
-			"name": "Delete inexistant record",
-			"dataMode": "params",
-			"data": [],
-			"rawModeData": null,
-			"descriptionFormat": null,
-			"description": "",
-			"headers": "Authorization: Bearer {{TOKEN}}\n",
-			"method": "DELETE",
-			"pathVariables": {},
-			"url": "{{API_URL}}/media/a-non-existing-record-id",
-			"preRequestScript": "",
-			"tests": "",
-			"version": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"folder": "3d68e83d-891a-4510-3298-6050504b1cb9",
 			"collectionId": "1b99de18-05e7-f05c-7127-8ae2983d3e6b"
 		},
 		{
